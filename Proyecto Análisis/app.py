@@ -32,7 +32,7 @@ def buscar_palabra():
     
     for elem in ds:
         linea = str(elem)
-        if palabra.lower() in linea.lower():  # Buscar de manera insensible a mayúsculas/minúsculas
+        if palabra.lower() in linea.lower(): 
             texto_info.insert(tk.END, linea + "\n")
             idx = texto_info.search(palabra, tk.END+"-1c linestart", nocase=1)
             end_idx = f"{idx}+{len(palabra)}c"
